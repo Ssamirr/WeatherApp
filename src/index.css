@@ -5,9 +5,142 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.696);
+  color: black;
+  font-weight: 600;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.main--inside,
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form{
+  border-bottom: 1px solid;
+  margin-bottom: 20px;
+}
+
+.main--inside{
+  background: rgba(128, 128, 128, 0.696);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.form input{
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.form button{
+  width: 120px;
+  height: 40px;
+  background: green;
+  color: white;
+  transition: 0.5s ease all;
+  cursor: pointer;
+  border-width: 1px;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form button:hover{
+  background: darkgreen;
+}
+
+.city-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.city{
+  text-align: right;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+span{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.loader {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loader--inside {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid green;
+  border-bottom: 16px solid green;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 12px rgb(0 0 0);
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
