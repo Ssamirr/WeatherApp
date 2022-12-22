@@ -18,6 +18,7 @@ function Main() {
                 setSituation(false);
                 setIsloading(false)
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [situation])
 
     const getCity = (event) => {
